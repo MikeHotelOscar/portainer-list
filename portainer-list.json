@@ -6269,6 +6269,11 @@
 					"default": "/portainer/Downloads"
 					"label": "DOWNLOAD_PATH"
 					"name": "DOWNLOAD_PATH"
+				},
+				{
+					"default": "America/New_York",
+					"label": "TZ",
+					"name": "TZ"
 				}
 			],
 			"name": "Arr Stack"
