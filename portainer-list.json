@@ -6254,17 +6254,33 @@
 					"default": "1000",
 					"label": "PGID",
 					"name": "PGID"
+				},
+				{
+					"default": "/portainer/TV"
+					"label": "TV_PATH"
+					"name": "TV_PATH"
+				},
+				{
+					"default": "/portainer/Movies"
+					"label": "MOVIES_PATH"
+					"name": "MOVIES_PATH"
+				},
+				{
+					"default": "/portainer/Downloads
+					"label": "DOWNLOAD_PATH"
+					"name": "DOWNLOAD_PATH"
 				}
 			],
 			"name": "Arr Stack"
 			"platform": "linux"
 			"ports": [
 				"8989:8989/tcp",
-				"7878:7878/tcp"
+				"7878:7878/tcp",
+				"9696:9696/tcp"
 			],
 			"repository": {
 				"stackfile": "arr-stack.yml",
-				"url": ""https://github.com/mikehoteloscar/portainer-list"
+				"url": "https://github.com/mikehoteloscar/portainer-list"
 			},
 			"restart_policy": "unless-stopped",
 			"title": "Arr-Stack",
