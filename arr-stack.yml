@@ -1,0 +1,42 @@
+version: "3"
+services:
+  prowlarr:
+    image: lscr.io/linuxserver/prowlarr:develop
+    container_name: prowlarr
+    environment:
+      - PUID: ${PUID}
+      - PGID: ${PGID}
+      - TZ: ${TZ}
+    volumes:
+      - /portainer/Files/AppData/Config/prowlarr:/config
+    ports:
+      - 9696:9696
+    restart: unless-stopped
+  sonarr:
+    image: lscr.io/linuxserver/sonarr
+    container_name: sonarr
+    environment:
+      - PUID: ${PUID}
+      - PGID: ${PGID}
+      - TZ: ${TZ}
+    volumes:
+      - /portainer/Files/AppData/Config/sonarr:/config
+      - ${TV_PATH}:/tv 
+      - ${DOWNLOAD_PATH}:/downloads 
+    ports:
+      - 8989:8989
+    restart: unless-stopped
+  radarr:
+    image: lscr.io/linuxserver/radarr
+    container_name: radarr
+    environment:
+      - PUID: ${PUID}
+      - PGID: ${PGID}
+      - TZ: ${TZ}
+    volumes:
+      - /portainer/Files/AppData/Config/radarr:/config
+      - ${MOVIES_PATH}:/movies 
+      - ${DOWNLOAD_PATH}:/downloads 
+    ports:
+      - 7878:7878
+    restart: unless-stopped
