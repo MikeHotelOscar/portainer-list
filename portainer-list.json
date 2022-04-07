@@ -6266,7 +6266,7 @@
 					"name": "MOVIES_PATH"
 				},
 				{
-					"default": "/portainer/Downloads
+					"default": "/portainer/Downloads"
 					"label": "DOWNLOAD_PATH"
 					"name": "DOWNLOAD_PATH"
 				}
